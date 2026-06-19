@@ -6,6 +6,8 @@ Open inverse-analysis workflow for fitting Arrhenius kinetic parameters
 **Preprint:** [whitepaper_1_draft.md](docs/whitepaper_1_draft.md)
 (submitted to engrXiv)
 
+**Repository:** https://github.com/kuro-tomo/calor-public
+
 ---
 
 ## What this is
@@ -121,3 +123,5 @@ If you use this code or benchmark results, please cite:
 ---
 
 *Shinonome Engineering LLC — mikasa2564@gmail.com*
+
+> **Note:** This repository will be transferred to the Shinonome Engineering LLC GitHub organization upon its creation.

@@ -177,14 +177,14 @@ We have demonstrated that a two-state adiabatic Arrhenius ODE can be calibrated 
 
 The Arrhenius compensation effect limits individual *E*a and *A* identifiability in single-temperature-range ARC experiments; the temperature trajectory remains well-constrained throughout, and the adiabatic rise Δ*T*ad is additionally constrained for the two cells whose Δ*H* and *C*p are independently resolved. For CFD source-term generation, the calibrated parameters provide a defensible engineering basis for FLACS/KFX inputs under NFPA 855 and UL 9540A.
 
-The complete calibration code, input files, and results will be published on GitHub (Shinonome Engineering LLC) under the MIT License concurrent with final submission. ARC data are cited per the CC BY 4.0 terms of the source Zenodo dataset.
+The complete calibration code, input files, and results are publicly available on GitHub ([https://github.com/kuro-tomo/calor-public](https://github.com/kuro-tomo/calor-public)) under the MIT License. ARC data are cited per the CC BY 4.0 terms of the source Zenodo dataset.
 
 ---
 
 ## Data and Code Availability
 
 - **ARC raw data:** Zenodo DOI: [10.5281/zenodo.7707929](https://zenodo.org/records/7707929) (Ohneseit et al., CC BY 4.0)
-- **Calibration code (Calor parser + benchmark):** GitHub — Shinonome Engineering LLC / calor-public (MIT License; to be published concurrent with final submission)
+- **Calibration code (Calor parser + benchmark):** [https://github.com/kuro-tomo/calor-public](https://github.com/kuro-tomo/calor-public) (MIT License)
 - **Results (w4\_benchmark.json):** Zenodo \[DOI to be registered upon submission\]
 - **Reproduction steps:** `python -m tools.bench_w4` from project root, Python 3.11+, requirements in `requirements.txt`
 
