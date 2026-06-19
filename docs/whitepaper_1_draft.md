@@ -1,6 +1,8 @@
 # Open Validation of Arrhenius Thermal Runaway Calibration for Lithium-Ion Cells — A Benchmark Against Public ARC Datasets
 
-**Shinonome Engineering LLC**  
+**Kazuo Abe**  
+Shinonome Engineering LLC  
+ORCID: [0009-0005-0557-0779](https://orcid.org/0009-0005-0557-0779)  
 Technical Report · 2026-06-19  
 Preprint submitted to engrXiv
 
@@ -198,7 +200,7 @@ ARC data provided open-access under CC BY 4.0 by Ohneseit et al. via Zenodo (DOI
 
 ## Competing Interests
 
-The author is affiliated with Shinonome Engineering LLC, which develops Calor as a commercial calibration component for PE/FPE practitioners. This commercial interest did not influence the benchmark methodology or the reported results, which are reproducible from the cited open ARC dataset.
+The author (K. Abe) is affiliated with Shinonome Engineering LLC, which develops Calor as a commercial calibration component for PE/FPE practitioners. This commercial interest did not influence the benchmark methodology or the reported results, which are reproducible from the cited open ARC dataset.
 
 ## Funding
 
@@ -252,5 +254,5 @@ The `capacity_ah` and `mass_g` fields are nominal/representative 21700 values re
 
 ---
 
-*Corresponding author: Shinonome Engineering LLC — mikasa2564@gmail.com*  
+*Corresponding author: Kazuo Abe, Shinonome Engineering LLC — info@shinonome-giken.com · ORCID: [0009-0005-0557-0779](https://orcid.org/0009-0005-0557-0779)*  
 *Preprint. Not peer-reviewed.*
