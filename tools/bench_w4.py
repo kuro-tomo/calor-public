@@ -173,6 +173,16 @@ def main() -> None:
                 "schema": "calor-w4-benchmark-v1",
                 "dataset": "Zenodo DOI 10.5281/zenodo.7707929",
                 "license": "CC BY 4.0",
+                "ci_disclaimer": (
+                    "WARNING: the per-cell ci_lower_95 / ci_upper_95 fields collapse to "
+                    "near-zero width (exactly zero for NCA-HEI) under the Arrhenius "
+                    "compensation effect. Single-start bootstrap re-converges every "
+                    "resample to the optimum theta*, so these intervals are "
+                    "optimization-geometry ARTIFACTS, NOT credible parameter uncertainty "
+                    "bounds. They are retained only as evidence of the collapse. Do NOT "
+                    "use them as +/- uncertainty on Ea, A, dH, or Cp. See whitepaper "
+                    "sections 2.3 and 3.3."
+                ),
                 "cells": results,
             },
             fh,
