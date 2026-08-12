@@ -134,6 +134,9 @@ def simulate_arc(
     T_sim = np.empty(n)
     T_sim[0] = T_onset_degC
     gap_mask = np.zeros(n, dtype=bool)
+    # 初期化点(index 0)は最適化中に除外しない。T_sim[0]=T_meas[0]ゆえ残差ゼロで勾配寄与なし。
+    # 除外すると分母(T_max-T_min)が変わり最適化景観が変形してθ*が変わりうる（§2.2注参照）。
+    # 報告用NRMSEでの除外はfit_arrhenius()で事後的に実施する。
 
     y = np.array([T_onset_degC, 0.0])   # 初期状態 [T_degC, alpha=0]
 
@@ -309,7 +312,13 @@ def fit_arrhenius(calor_input: CalorInput) -> ArrheniusFitResult:
     T_sim_opt, gap_mask_opt = simulate_arc(
         t_arr, T_meas_arr, T_onset_actual, phi, theta_opt
     )
-    nrmse_opt = compute_nrmse(T_meas_arr, T_sim_opt, gap_mask_opt)
+    # 報告用NRMSE：初期化点を分母のT_min計算から除外（§2.2・§2.3）。
+    # T_sim[0]=T_meas[0]ゆえ残差ゼロ→分子への影響は sqrt(N/(N-1))≈0.5%のみ。
+    # 主な影響は分母縮小（T_minがT_onset→最初の非ギャップ非初期化点へ）。
+    # 最適化中はgap_mask_opt[0]=Falseを使用（θ*不変を保証）。
+    gap_mask_reported = gap_mask_opt.copy()
+    gap_mask_reported[0] = True
+    nrmse_opt = compute_nrmse(T_meas_arr, T_sim_opt, gap_mask_reported)
 
     # ── Stage 3+: LM再フィット → 信頼区間（§5.4） ─────────────────────────
     ci_lower, ci_upper = _compute_ci(
