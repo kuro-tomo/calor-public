@@ -1,9 +1,9 @@
-# Open Validation of Arrhenius Thermal Runaway Calibration for Lithium-Ion Cells — A Benchmark Against Public ARC Datasets
+# Open Validation of Arrhenius Thermal Runaway Calibration for Lithium-Ion Cells — A Benchmark Against a Public ARC Dataset
 
 **Kazuo Abe**  
 Shinonome Engineering LLC  
 ORCID: [0009-0005-0557-0779](https://orcid.org/0009-0005-0557-0779)  
-Technical Report · 2026-06-19  
+Technical Report · 2026-06-19 (last revised 2026-06-24)  
 Preprint submitted to engrXiv
 
 ---
@@ -121,7 +121,7 @@ Table 1 presents the estimated parameters and corrected NRMSE for each cell. Fou
 \* NRMSE computed with both HWS gap-reset points and the ODE initialization point excluded from the objective (§2.2, §2.3). Raw fitted values and legacy NRMSE (initialization point included) are in `data/processed/w4_benchmark.json`.  
 † Δ*H* and/or *C*p deviating ≤1.5% from the optimizer starting value (≈500,000 J/kg, 1,000 J/(kg·K)); these parameters are not data-constrained, so the corresponding Δ*T*ad (also marked †) is a literature-default placeholder, not data-derived.  
 †† *C*p at its upper physical bound (1,500 J/(kg·K)); likewise not data-constrained.  
-‡ Δ*T*ad = Δ*H* / *C*p [K]: adiabatic temperature rise to full reaction completion (α→1). The data-constrained quantity is the realized rise α_f·Δ*T*ad. For NMC: 0.51 × 684 ≈ 349 K vs. observed 331 K (Δ*T*ad/obs ≈ 2.1×). For NCA-HEII: 0.61 × 455 ≈ 278 K vs. observed 289 K (≈1.6×). Δ*T*ad values for NMC and NCA-HEII must be understood as extrapolations to α→1, not directly observed quantities. Per-parameter bootstrap 95% CIs collapse to near-zero for all cells and are not reported (§2.3, §3.3).  
+‡ Δ*T*ad = Δ*H* / *C*p [K]: adiabatic temperature rise to full reaction completion (α→1). The data-constrained quantity is the realized rise α_f·Δ*T*ad. For NMC: 0.51 × 684 ≈ 349 K vs. observed (measured *T*max − *T*min) 331 K (Δ*T*ad/obs ≈ 2.1×). For NCA-HEII: 0.61 × 455 ≈ 278 K vs. observed 289 K (≈1.6×). The 18 K (NMC) and 11 K (NCA-HEII) gaps between the model-implied realized rise (α_f·Δ*T*ad) and the directly observed temperature range are consistent with — and of the same order as — the reported absRMSE (25 K and 29 K respectively; Table 1), i.e. they reflect ordinary fit residual rather than a separate error source. Δ*T*ad values for NMC and NCA-HEII must be understood as extrapolations to α→1, not directly observed quantities. Per-parameter bootstrap 95% CIs collapse to near-zero for all cells and are not reported (§2.3, §3.3).  
 ⁑ NCA-HEI is a complete non-fit: α_f ≈ 0, simulated peak ≈139 °C vs. measured 484 °C, absRMSE ≈ 97 K. The range-normalized NRMSE (0.257) is misleading due to the large temperature-range denominator (≈379 K). **The NCA-HEI parameters in this table must not be used for CFD source-term generation.**  
 § Optimizer convergence flag: ✓ = strict stopping tolerance met (NCA-HEI, NCA-HP, both L-BFGS-B); ✗ = terminated on the flat compensation ridge without meeting strict tolerance (NMC, NCA-HEII via Nelder-Mead; LFP via L-BFGS-B). Fit quality should be judged by NRMSE and absRMSE, not this flag (§3.3).  
 ¶ *E*a coincides with the 120 kJ/mol starting value to within optimizer tolerance (>5 significant figures) and is not independently resolved; read as "consistent with ≈120 kJ/mol." NMC (96.3 kJ/mol) is the one cell with a strongly data-driven *E*a.
@@ -224,9 +224,9 @@ This work received no external funding; it was conducted internally by Shinonome
 
 ## References
 
-[1] Hatchard, T. D.; MacNeil, D. D.; Basu, A.; Dahn, J. R. Thermal Model of Cylindrical and Prismatic Lithium-Ion Cells. *J. Electrochem. Soc.* **2001**, *148*, A755–A761. DOI: 10.1149/1.1386084.
+[1] Hatchard, T. D.; MacNeil, D. D.; Basu, A.; Dahn, J. R. Thermal Model of Cylindrical and Prismatic Lithium-Ion Cells. *J. Electrochem. Soc.* **2001**, *148*, A755–A761. DOI: 10.1149/1.1377592.
 
-[2] Kim, G.-H.; Pesaran, A.; Spotnitz, R. A Three-Dimensional Thermal Abuse Model for Lithium-Ion Cells. *J. Power Sources* **2007**, *170*, 476–489. DOI: 10.1016/j.jpowsour.2007.04.065.
+[2] Kim, G.-H.; Pesaran, A.; Spotnitz, R. A Three-Dimensional Thermal Abuse Model for Lithium-Ion Cells. *J. Power Sources* **2007**, *170*, 476–489. DOI: 10.1016/j.jpowsour.2007.04.018.
 
 [3] Richard, M. N.; Dahn, J. R. Accelerating Rate Calorimetry Study on the Thermal Stability of Lithium Intercalated Graphite in Electrolyte. I. Experimental. *J. Electrochem. Soc.* **1999**, *146*, 2068–2077. DOI: 10.1149/1.1391893.
 
