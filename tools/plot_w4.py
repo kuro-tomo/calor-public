@@ -104,14 +104,14 @@ def main() -> None:
             )
         # シミュレーション値
         ax.plot(t_arr, T_sim, "-", linewidth=2.0, color=cell["color"],
-                label=f"$T_{{\\mathrm{{sim}}}}$ (NRMSE={p['nrmse']:.3f})")
+                label=f"$T_{{\\mathrm{{sim}}}}$ (NRMSE={p['nrmse_corrected']:.3f})")
 
         Ea_kJ = p["Ea_J_mol"] / 1000.0
         dTad  = p["dH_J_kg"] / p["Cp_J_kgK"]
         ax.set_title(
             f"{chem} (21700)\n"
             f"$E_a$={Ea_kJ:.0f} kJ/mol, $A$={p['A_1_s']:.2e} s⁻¹\n"
-            f"$\\Delta T_{{ad}}$={dTad:.0f} K, NRMSE={p['nrmse']:.3f}",
+            f"$\\Delta T_{{ad}}$={dTad:.0f} K, NRMSE={p['nrmse_corrected']:.3f}",
             fontsize=8.5,
         )
         ax.set_xlabel("Time [min]", fontsize=8)
