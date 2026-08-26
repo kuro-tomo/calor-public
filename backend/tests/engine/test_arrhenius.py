@@ -167,7 +167,10 @@ def test_hws_gap_skip():
 
     # gap_mask[2] が True（リセット点として記録される）
     assert gap_mask[2], "ギャップリセット点はgap_mask[2]=Trueでなければならない"
-    assert not gap_mask[0] and not gap_mask[1], "非ギャップ点はgap_mask=Falseであること"
+    # gap_mask[0] は False（最適化モード：初期化点はfit_arrhenius()で事後的に除外）
+    assert not gap_mask[0], "最適化用gap_maskでは初期化点はFalse（θ*不変を保証するため）"
+    # gap_mask[1] は dt=10分 < 30分ゆえ False（通常区間）
+    assert not gap_mask[1], "通常区間（dt<30min）はgap_mask=Falseであること"
 
     # ギャップ幅の検証
     assert (t_arr[2] - t_arr[1]) > DT_GAP_THRESH_MIN

@@ -29,7 +29,10 @@
         "A": 45534754.72948129,
         "dH": 617526.4929421721,
         "Cp": 902.6560477954537
-      }
+      },
+      "alpha_f": 0.51,
+      "nrmse_corrected": 0.076,
+      "abs_rmse_K": 24.8
     },
     {
       "label": "LFP（21700）",
@@ -56,7 +59,10 @@
         "A": 600608435.6854348,
         "dH": 499999.9999371979,
         "Cp": 1000.0306850678318
-      }
+      },
+      "alpha_f": 0.418,
+      "nrmse_corrected": 0.3038,
+      "abs_rmse_K": 81.2
     },
     {
       "label": "NCA-HEI（21700）",
@@ -83,7 +89,10 @@
         "A": 1015602.2471370355,
         "dH": 499992.94476743083,
         "Cp": 1500.0
-      }
+      },
+      "alpha_f": 0.0,
+      "nrmse_corrected": 0.2565,
+      "abs_rmse_K": 97.0
     },
     {
       "label": "NCA-HEII（21700）",
@@ -110,7 +119,10 @@
         "A": 29936098977.705135,
         "dH": 492652.8794118076,
         "Cp": 1083.8090588616321
-      }
+      },
+      "alpha_f": 0.612,
+      "nrmse_corrected": 0.1104,
+      "abs_rmse_K": 29.2
     },
     {
       "label": "NCA-HP（21700）",
@@ -137,7 +149,11 @@
         "A": 22461814184.474262,
         "dH": 499999.9999929267,
         "Cp": 999.994912415009
-      }
+      },
+      "alpha_f": 0.554,
+      "nrmse_corrected": 0.0931,
+      "abs_rmse_K": 25.5
     }
-  ]
+  ],
+  "nrmse_correction_note": "nrmse_corrected: NRMSE computed with the ODE initialization point EXCLUDED (gap_mask[0]=True, whitepaper §2.2/§2.3 fix). The legacy nrmse field retains the original value with initialization point included. alpha_f: reaction fraction at end of ARC measurement window (forward integration using fitted theta*). abs_rmse_K: absolute RMSE [K] over non-gap non-init points. theta* (Ea, A, dH, Cp) is unchanged: removing a zero-residual point does not shift the gradient at the optimum."
 }
