@@ -210,6 +210,8 @@ The complete calibration code, input files, and results are publicly available o
 
 ARC data provided open-access under CC BY 4.0 by Ohneseit et al. via Zenodo (DOI: 10.5281/zenodo.7707929). The calibration workflow reuses numerical infrastructure developed in-house at Shinonome Engineering LLC.
 
+This work was developed with the assistance of an AI coding and writing assistant (Claude, Anthropic), used for code implementation, iterative technical review, reference verification, and drafting/copy-editing of this manuscript under human supervision. All scientific claims, benchmark results, and interpretations were verified and approved by the author.
+
 ---
 
 ## Competing Interests
