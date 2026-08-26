@@ -187,7 +187,7 @@ The complete calibration code, input files, and results are publicly available o
 
 - **ARC raw data:** Zenodo DOI: [10.5281/zenodo.7707929](https://zenodo.org/records/7707929) (Ohneseit et al., CC BY 4.0)
 - **Calibration code (Calor parser + benchmark):** [https://github.com/kuro-tomo/calor-public](https://github.com/kuro-tomo/calor-public) (MIT License)
-- **Results (w4\_benchmark.json):** Zenodo \[DOI to be registered upon submission\]
+- **Results (w4\_benchmark.json):** Zenodo DOI: [10.5281/zenodo.22104009](https://zenodo.org/records/22104009)
 - **Reproduction steps:** `python -m tools.bench_w4` from project root, Python 3.11+, requirements in `requirements.txt`
 
 ---
