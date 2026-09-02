@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calor — BESS Thermal Runaway Calibration</title>
+<meta name="description" content="Open Arrhenius kinetic-parameter calibration for lithium-ion BESS thermal runaway modeling, for PE/FPE firms performing NFPA 855 large-scale fire test analysis.">
+<style>
+  :root {
+    --bg: #fbfaf8;
+    --fg: #1a1a1a;
+    --muted: #5c5c5c;
+    --line: #ddd8d0;
+    --accent: #9a3324;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15130f;
+      --fg: #ece8e0;
+      --muted: #a8a196;
+      --line: #35322b;
+      --accent: #e0846a;
+      --card: #1c1a15;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    line-height: 1.65;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+  .eyebrow {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.75rem;
+  }
+  h1 {
+    font-size: 2.1rem;
+    margin: 0 0 0.6rem;
+    line-height: 1.25;
+  }
+  .tagline {
+    font-size: 1.15rem;
+    color: var(--muted);
+    margin: 0 0 2.5rem;
+    max-width: 60ch;
+  }
+  h2 {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.5rem;
+    margin: 2.75rem 0 1rem;
+  }
+  p { margin: 0 0 1rem; }
+  .links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .links li {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+  }
+  .links a {
+    color: var(--fg);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .links a:hover { color: var(--accent); }
+  .links .desc {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 0.2rem;
+  }
+  .pending {
+    color: var(--muted);
+    font-style: italic;
+  }
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.92em;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 0.1em 0.4em;
+  }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Shinonome Engineering LLC</p>
+  <h1>Calor</h1>
+  <p class="tagline">Open-source calibration of Arrhenius thermal-runaway kinetics (E<sub>a</sub>, A, ΔH, C<sub>p</sub>) for lithium-ion BESS cells, fit directly to public Accelerating Rate Calorimetry (ARC) data.</p>
+
+  <h2>Who this is for</h2>
+  <p>Built for PE and FPE firms performing large-scale fire test (LSFT) analysis and thermal-runaway hazard modeling under NFPA&nbsp;855 — as a white-label calibration component feeding downstream tools such as FLACS or KFX, not a stamped deliverable in its own right.</p>
+
+  <h2>Read &amp; verify</h2>
+  <ul class="links">
+    <li>
+      <a href="whitepaper_1_draft.pdf">Whitepaper #1 (PDF)</a>
+      <span class="desc">Method, five-chemistry benchmark against public ARC data (NRMSE ≤ 0.263), and limitations.</span>
+    </li>
+    <li>
+      <a href="https://zenodo.org/records/22104009">Benchmark dataset — Zenodo</a>
+      <span class="desc">DOI: <code>10.5281/zenodo.22104009</code> — machine-readable fit results (<code>w4_benchmark.json</code>).</span>
+    </li>
+    <li>
+      <span class="pending">Preprint submitted to engrXiv — under moderator review</span>
+      <span class="desc">Public preprint link will be added once the submission clears review.</span>
+    </li>
+    <li>
+      <a href="https://github.com/kuro-tomo/calor-public">Source code &amp; reproduction steps — GitHub</a>
+      <span class="desc">MIT-licensed engine, optimizer, and the full benchmark pipeline.</span>
+    </li>
+  </ul>
+
+  <footer>
+    Shinonome Engineering LLC — <a href="mailto:info@shinonome-giken.com">info@shinonome-giken.com</a>
+  </footer>
+</main>
+</body>
+</html>
