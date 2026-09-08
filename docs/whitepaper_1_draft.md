@@ -4,7 +4,7 @@
 Shinonome Engineering LLC  
 ORCID: [0009-0005-0557-0779](https://orcid.org/0009-0005-0557-0779)  
 Technical Report · 2026-06-19 (last revised 2026-06-24)  
-Preprint submitted to engrXiv
+Preprint: engrXiv, DOI: [10.31224/8086](https://doi.org/10.31224/8086) (posted 2026-08-29)
 
 ---
 
