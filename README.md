@@ -4,7 +4,7 @@ Open inverse-analysis workflow for fitting Arrhenius kinetic parameters
 (Ea, A, ΔH, Cp) to Accelerating Rate Calorimetry (ARC) data.
 
 **Preprint:** [whitepaper_1_draft.md](docs/whitepaper_1_draft.md)
-(submitted to engrXiv)
+(engrXiv, DOI: [10.31224/8086](https://doi.org/10.31224/8086))
 
 **Repository:** https://github.com/shinonome-giken/calor-public
 
@@ -118,7 +118,7 @@ If you use this code or benchmark results, please cite:
 
 > Shinonome Engineering LLC. *Open Validation of Arrhenius Thermal Runaway Calibration
 > for Lithium-Ion Cells — A Benchmark Against Public ARC Datasets.*
-> engrXiv, 2026. [DOI to be added upon publication]
+> engrXiv, 2026. DOI: [10.31224/8086](https://doi.org/10.31224/8086)
 
 ---
 
